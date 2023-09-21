@@ -1,4 +1,3 @@
-
 with open("data1.txt") as f:
     input = f.read()
 
@@ -6,6 +5,7 @@ counter: int = 0
 number_str: str = ""
 sum_number_int: int = 0
 maks: list[int] = [0, 0, 0]
+
 
 def check_sum(number: int):
     maks.sort(reverse=True)
@@ -15,7 +15,7 @@ def check_sum(number: int):
 
 for char in input:
     if char == "\n":
-        counter+=1
+        counter += 1
 
         if counter == 2:
             check_sum(sum_number_int)

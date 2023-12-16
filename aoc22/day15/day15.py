@@ -2,10 +2,9 @@
 occupied_space = set()
 beacons = set()
 
-target_y = 10
-# target_y = 2_000_000
+target_y = 2_000_000
 
-with open("tdata15.txt") as f:
+with open("data15.txt") as f:
     for line in f:
         x = int(line[line.find("x=") + 2 : line.find(",")])
         y = int(line[line.find("y=") + 2 : line.find(":")])

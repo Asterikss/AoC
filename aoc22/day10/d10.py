@@ -4,23 +4,23 @@ cycle_values = []
 x = 1
 
 with open("data10.txt", "r") as f:
-    for line in f:
-        value = 0
-        if line.find("noop") == -1:
-            command, value = line.split(" ")
-        else:
-            command = "noop"
-        cycle += 1
+  for line in f:
+    value = 0
+    if line.find("noop") == -1:
+      command, value = line.split(" ")
+    else:
+      command = "noop"
+    cycle += 1
 
-        if cycle in cycle_table:
-            cycle_values.append(x * cycle)
+    if cycle in cycle_table:
+      cycle_values.append(x * cycle)
 
-        if command != "noop":
-            cycle += 1
+    if command != "noop":
+      cycle += 1
 
-            if cycle in cycle_table:
-                cycle_values.append(x * cycle)
-            x += int(value)
+      if cycle in cycle_table:
+        cycle_values.append(x * cycle)
+      x += int(value)
 
 
 print(f"Part 1: {sum(cycle_values)}")
